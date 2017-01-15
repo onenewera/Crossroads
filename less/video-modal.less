@@ -1,0 +1,113 @@
+
+
+/* --------------------------------
+
+Modal Window
+
+-------------------------------- */
+.morph-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	visibility: hidden;
+  transition: all .8s ease;
+}
+
+.morph-modal.open-modal {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal-content,
+.close-modal {
+	opacity: 0;
+	transition: opacity .2s;
+	z-index: 2;
+}
+
+.modal-visible .modal-content,
+.modal-visible .close-modal {
+	opacity: 1;
+}
+
+.modal-content {
+	position: relative;
+	height: 100%;
+	overflow: auto;
+	padding: 40px 20%;
+}
+
+.close-modal {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	/* replace text with image */
+	height: 56px;
+	width: 56px;
+	background: rgba(0, 0, 0, .4);
+	border-radius: 50%;
+	border: none;
+	text-indent: 100%;
+	overflow: hidden;
+	color: transparent;
+	white-space: nowrap;
+	transition: background .2s;
+}
+
+.close-modal::before, .close-modal::after {
+	/* this is the 'X' arrow */
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 2px;
+	width: 24px;
+	background: @white;
+}
+
+.close-modal::before {
+	transform: translate(-50%) rotate(45deg);
+}
+
+.close-modal::after {
+	transform: translate(-50%) rotate(-45deg);
+}
+
+.close-modal:hover {
+	background: rgba(0, 0, 0, .6);
+}
+
+/* --------------------------------
+
+Modal Trigger and morphing background
+
+-------------------------------- */
+
+.morph-btn, .morph-background {
+	display: inline-block;
+	background-color: @blue;
+	height: 45px;
+	line-height: 45px;
+	width: 170px;
+}
+
+.morph-btn {
+	color: @white;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	opacity: 1;
+  text-align: center;
+}
+
+.morph-background {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	transition: transform .3s;
+}

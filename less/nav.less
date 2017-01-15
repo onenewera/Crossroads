@@ -1,0 +1,100 @@
+// Primary Navigation
+// Included in master.scss
+
+// *************************************************************************
+// This a bad attempt at flexbox *IMPROVE THIS MENU!!!!*
+// *************************************************************************
+
+nav {
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;;
+  height: 135px;
+  width: 100vw;
+  background: @white;
+  border-bottom: 1px solid @border-color;
+
+  .logo {
+    flex-basis: 300px;
+    background: @white;
+    width: 300px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-right: 1px solid @border-color;
+
+    .navLogo {
+      width: 150px;
+    }
+  }
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    background: @white;
+    height: 49%;
+    // Offset the width of the .logo here
+    width: calc(100vw - 300px);
+
+    .links {
+      align-items: center;
+      display: flex;
+
+      li {
+        justify-content: center;
+        display: inline;
+        margin-left: 40px;
+      }
+    }
+
+    .nav-primary-button {
+      background: @primary-action;
+      margin-left: 25px;
+      width: 233px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-basis: 233px;
+    }
+  }
+  .sub-menu {
+    flex-grow: 1;
+    display: block;
+    background: @white;
+    height: 50%;
+    // Offset the width of the .logo here
+    width: calc(100vw - 300px);
+
+    .social-links {
+      border-bottom: 1px solid @border-color;
+      display: flex;
+      justify-content: flex-end;
+
+// ==================================================
+// !!!!!!!!!!!!!!!!!!!!!!!! REDO n+3 !!!!!!!!!!!!!!!
+// ==================================================
+      :nth-child(n+3):hover {
+        background: @blue;
+      }
+
+      .nav-contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 35px;
+      }
+
+      .social {
+        height: 67px;
+        width: 70px;
+        display: flex;
+        list-style-type: none;
+        border-left: 1px solid @border-color;
+
+        a {
+          margin: auto;
+        }
+      }
+    }
+  }
+}

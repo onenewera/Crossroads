@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Crossroads House</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+<!-- ==================================================================================
+     MAIN NAVIGATION //////////////////////////////////////////////////////////////////
+     ================================================================================== -->
+    <!-- Main navigation -->
+    <nav>
+      <!-- Logo box on the left - fixed with flex basis -->
+      <div class="logo">
+        <!-- Find a way to make this not dragable - background image or something I dont know, you're smart sometimes -->
+        <img class="navLogo" src="assets/img/logoBlue.svg" alt="#">
+      </div>
+
+      <!-- Menu links -->
+      <div class="menu">
+        <ul class="links">
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Homelessness</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Giving</a></li>
+          <li><a href="#">News and Events</a></li>
+        </ul>
+        <a class="nav-primary-button" href="#">Donate</a>
+      </div>
+
+      <!-- Utilitiy nav -->
+      <div class="sub-menu">
+        <ul class="social-links">
+          <div class="nav-contact">
+            <a href="#">Volunteering</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">Contact Us</a>
+          </div>
+          <li class="social"><a src="#"><i class="fa fa-facebook fa-lg"></i></a></li>
+          <li class="social"><a src="#"><i class="fa fa-vimeo fa-lg"></i></a></li>
+          <li class="social"><a src="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+        </ul>
+      </div>
+    </nav> <!-- Main navigation -->
+
+<!-- ==================================================================================
+     HERO BANNER //////////////////////////////////////////////////////////////////////
+     ================================================================================== -->
+    <div class="hero">
+
+     	<a href="#modal-1" class="morph-btn">Open Modal</a>
+    </div>
+
+     <div id="modal-1" class="morph-modal">
+     	<div class="modal-content">
+     		<p>
+     			Firts Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! A rerum pariatur neque laborum earum, illum voluptatibus eum voluptatem fugiat, porro animi tempora? Sit harum nulla, nesciunt molestias, iusto aliquam aperiam est qui possimus reprehenderit ipsam ea aut assumenda inventore iste! Animi quaerat facere repudiandae earum quisquam accusamus tempora, delectus nesciunt, provident quae aliquam, voluptatum beatae quis similique in maiores repellat eligendi voluptas veniam optio illum vero! Eius, dignissimos esse eligendi veniam.
+     		</p>
+     	</div>
+
+ 	<button class="close-modal">Close</button>
+
+ 	<span class="morph-background"></span>
+ </div>
+
+    <!-- Good to do first if users have this version cached in their browser already - fallback provided -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- If jquery from the CDN isn't loaded write the min.js from the server to the document - DONT FORGET TO escape the / -->
+    <script>
+    	if( !window.jQuery ) document.write('<script src="js/min/jquery-3.1.1.min.js"><\/script>');
+    </script>
+    <script src="js/app.js"></script>
+    <script src="js/modal.js"></script>
+  </body>
+</html>
