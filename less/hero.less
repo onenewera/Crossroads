@@ -1,4 +1,60 @@
-.hero {
-  background: @primary-action;
+.dw-hero-banner {
+  background: @blue;
   height: 490px;
+  display: flex;
+  justify-content: space-between;
+
+  .dw-events {
+    flex-grow: 2;
+    background: @white;
+    border-right: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+  }
+
+  .dw-video-slider {
+    flex: 5;
+    background: url(https://s29.postimg.org/5qhwj8hx3/dw_hero_bg_2x.jpg) no-repeat;
+    background-size: 73%;
+
+    @media @desktop {
+      backgound-size: cover;
+      background-position: top right;
+    }
+
+    @media @tablet {
+      background-position: right;
+      background-size: cover;
+    }
+    @media @palm {
+      background-position: right;
+      background-size: cover;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      max-width: 35rem;
+
+      p {
+        color: @white;
+        font-family: @secondary-font;
+        letter-spacing: .02em;
+        font-weight: 400;
+        text-rendering: geometricPrecision;
+      }
+
+      .video-cta {
+        display: flex;
+
+        .video-play {
+          padding-right: 2rem;
+        }
+
+        .video-content {
+          border-left: 1px solid rgba(255,255,255,.2);
+          padding-left: 2rem;
+        }
+      }
+    }
+  }
 }

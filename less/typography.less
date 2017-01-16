@@ -1,15 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i');
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+@import (inline) "css/google-fonts.css";
 @import "color";
 
 @primary-font: 'Lato', sans-serif;
 @secondary-font: 'Crimson Text', serif;
 
-h1 {
-  font-family: @secondary-font;
-  // red is #000000 right now
-  color: $red;
-  font-size: 200px;
-  font-family: sans-serif;
+// MIXINS
+.primary-font-color {
+  color: @primary-font-color;
+}
+.primary-font {
+  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
+  letter-spacing: .06em;
+  color: @primary-font-color;
+}
+
+body {
+  font-family: @primary-font;
+  color: @primary-font-color;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: @secondary-font !important;
+  font-weight: 400;
+  letter-spacing: .02em;
+  // red is #000000 right now
+  color: @white;
+  font-size: 56px;
+  font-family: sans-serif;
+  text-rendering: geometricPrecision;
 }

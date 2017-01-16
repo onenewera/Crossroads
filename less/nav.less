@@ -1,99 +1,86 @@
 // Primary Navigation
-// Included in master.scss
+// Included in styles.less
 
 // *************************************************************************
 // This a bad attempt at flexbox *IMPROVE THIS MENU!!!!*
 // *************************************************************************
 
-nav {
+.dw-nav-container {
   display: flex;
-  align-content: flex-end;
-  flex-wrap: wrap;
-  flex-direction: column-reverse;;
   height: 135px;
-  width: 100vw;
-  background: @white;
+  justify-content: flex-end;
   border-bottom: 1px solid @border-color;
 
-  .logo {
-    flex-basis: 300px;
-    background: @white;
-    width: 300px;
+  .dw-logo-container {
     display: flex;
-    align-content: center;
-    justify-content: center;
+    flex: 0 250px;
+    margin-right: auto;
+    width: 250px;
     border-right: 1px solid @border-color;
 
-    .navLogo {
-      width: 150px;
+    .dw-nav-logo {
+      width: 9rem;
+      margin: auto;
     }
   }
-  .menu {
+
+  .dw-nav-links {
     display: flex;
-    justify-content: flex-end;
-    background: @white;
-    height: 49%;
-    // Offset the width of the .logo here
-    width: calc(100vw - 300px);
-
-    .links {
-      align-items: center;
-      display: flex;
-
-      li {
-        justify-content: center;
-        display: inline;
-        margin-left: 40px;
-      }
-    }
-
-    .nav-primary-button {
-      background: @primary-action;
-      margin-left: 25px;
-      width: 233px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-basis: 233px;
-    }
-  }
-  .sub-menu {
     flex-grow: 1;
-    display: block;
-    background: @white;
-    height: 50%;
-    // Offset the width of the .logo here
-    width: calc(100vw - 300px);
+    flex-direction: column;
 
-    .social-links {
-      border-bottom: 1px solid @border-color;
+    //====================================
+    // UTILITY NAV
+    //====================================
+    .dw-utility-nav {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
+      background: @white;
+      // Height for both of the horiztonal link bars
+      height: 50%;
 
-// ==================================================
-// !!!!!!!!!!!!!!!!!!!!!!!! REDO n+3 !!!!!!!!!!!!!!!
-// ==================================================
-      :nth-child(n+3):hover {
-        background: @blue;
+      .dw-utility-nav-contact {
+        margin-right: 45px;
       }
 
-      .nav-contact{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-right: 35px;
-      }
-
-      .social {
-        height: 67px;
-        width: 70px;
+      .dw-social-links {
         display: flex;
         list-style-type: none;
-        border-left: 1px solid @border-color;
+        height: 100%;
 
-        a {
-          margin: auto;
+        li {
+          width: 70px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-left: 1px solid @border-color;
+
         }
+      }
+    }
+
+    //====================================
+    // MAIN LINKS NAV
+    //====================================
+    .dw-links-container {
+      display: flex;
+      justify-content: space-around;;
+      align-items: center;
+      border-top: 1px solid @border-color;
+      background: @white;
+      order: 1;
+      // Height for both of the horiztonal link bars
+      height: 50%;
+      list-style-type: none;
+      .primary-font;
+
+      li {
+        margin-left: 25px;
+      }
+
+      .dw-nav-donate-btn {
+        color: @primary-action;
       }
     }
   }

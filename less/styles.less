@@ -1,11 +1,23 @@
-// @import "typography";
-// @import "color";
-// @import "nav";
-// @import "buttons";
-// @import "hero";
-// @import "video-modal";
+@import "typography";
+@import "color";
+@import "nav";
+@import "buttons";
+@import "hero";
+@import "video-modal";
+@import "mixins";
+@import "grid";
 
 * {
   padding: 0;
   margin: 0;
+  transition: all .3s ease;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: @primary-font-color-hover;
+    }
+  }
 }
