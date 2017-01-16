@@ -1,6 +1,7 @@
 .dw-hero-banner {
   background: @blue;
-  height: 490px;
+  min-height: 490px;
+  height: 30vw;
   display: flex;
   justify-content: space-between;
 
@@ -9,12 +10,22 @@
     background: @white;
     border-right: 1px solid @border-color;
     border-bottom: 1px solid @border-color;
+
+    @media @palm {
+      visibility: hidden;
+      opacity: 0;
+    }
   }
 
   .dw-video-slider {
     flex: 5;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 7vw;
+    padding-right: 7vw;
+    align-items: center;
     background: url(https://s29.postimg.org/5qhwj8hx3/dw_hero_bg_2x.jpg) no-repeat;
-    background-size: 73%;
+    background-size: cover;
 
     @media @desktop {
       backgound-size: cover;
@@ -30,10 +41,10 @@
       background-size: cover;
     }
 
-    .content {
+    .dw-content {
       display: flex;
       flex-direction: column;
-      max-width: 35rem;
+      max-width: 650px;
 
       p {
         color: @white;
@@ -43,16 +54,27 @@
         text-rendering: geometricPrecision;
       }
 
-      .video-cta {
+      .dw-video-cta {
         display: flex;
+        margin-top: 30px;
 
-        .video-play {
+        .dw-video-play {
           padding-right: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          i {
+            color: @white;
+          }
         }
 
-        .video-content {
+        .dw-video-content {
           border-left: 1px solid rgba(255,255,255,.2);
           padding-left: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }
