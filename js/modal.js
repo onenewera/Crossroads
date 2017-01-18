@@ -49,7 +49,7 @@
 			//wait for the transition to be over -> show modal content
 			selectedModalWindow.addClass('modal-visible');
 		});
-
+		
 	});
 
 	//listen to the click on the close-modal buttons
